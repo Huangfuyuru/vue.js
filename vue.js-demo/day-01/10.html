@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>属性的绑定和属性的简写</title>
+    <script src="js/vue.js"></script>
+    <script>
+        window.onload=function(){
+            new Vue({
+                el:'#itany',
+                data:{
+                    url:'https://www.baidu.com/img/bd_logo1.png?where=super',
+                    w:'200px',
+                    h:'100px'
+                }
+            })
+        }
+    </script>
+</head>
+<body>
+    <div id="itany">
+        <img v-bind:src="url" :width="w" :heigt="h">
+        <!-- <img :src="url"> -->
+    </div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>常用的指令：v-on</title>
+    <script src="js/vue.js"></script>
+</head>
+<body>
+    <div id="itany">
+        <button v-on:click="show()">点击</button>
+        <button v-on:click="add()">向数组中添加一个元素</button>
+        {{arr}}}
+    </div>
+</body>
+<script>
+    //v-on 进行事件的绑定 
+    //用法  v-on:事件名称="函数"
+    window.onload=function(){
+        new Vue({
+            el:"#itany",
+            data:{
+                arr:[1,3,3,5]
+            },
+            methods:{//用来定义方法
+                show:function(){
+                    console.log('show方法');
+                },
+                add(){
+                    //使用this访问当前实例中的成员
+                    this.arr.push(6);
+                }
+            }
+        })
+    }
+</script>
+</html>

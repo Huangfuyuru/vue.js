@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>常用指令：v-model</title>
+    <script src="js/vue.js"></script>
+    <script>
+        window.onload=function(){
+            //配置是否允许vue-devtools检查代码，方便测试。
+            //生产环境中需要设置为false
+
+            Vue.config.devtools-false;//默认是true 允许检查
+            Vue.config.productionTip=false//阻止vue启动时生产生产信息
+            new Vue({
+                el:'#itany',//指定关联的选择器
+                data:{      //存数据
+                    msg:'Hello World',
+                    name:'tom'
+                }
+            })
+        }
+    </script>
+</head>
+<body>
+    <!--{{}} 称为模板，用来进行数据的绑定显示在页面中-->
+    <div id="itany">
+        {{name}}
+    </div>
+</body>
+</html>
